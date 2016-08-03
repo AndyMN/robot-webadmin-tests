@@ -1,6 +1,6 @@
 *** Settings ***
 Library  Selenium2Library
-Suite Setup     WEBPAGE SHOULD BE REACHABLE     prometheus.desy.de:2288     dCache Overview
+Suite Setup     WEBPAGE SHOULD BE REACHABLE     http://localhost:2288/     dCache Overview
 
 *** Test Cases ***
 FIRST TEST
