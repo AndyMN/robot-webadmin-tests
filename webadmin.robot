@@ -1,17 +1,13 @@
+# BASE_URL, BASE_TITLE and BROWSER are passed on by Jenkins via Environment Variable
+
 *** Settings ***
 Library  Selenium2Library
-Suite Setup     WEBPAGE SHOULD BE REACHABLE     ${BASE_URL}     ${BASE_TITLE}     ${BROWSER}
+Suite Setup     WEBPAGE SHOULD BE REACHABLE     %{BASE_URL}     %{BASE_TITLE}     %{BROWSER}
 Test Template   CLICKING ELEMENT SHOULD GIVE PAGE TITLE
 
 
-
-*** Variables ***
-${BASE_URL}     http://prometheus.desy.de:2288/webadmin
-${BASE_TITLE}   dCache Overview
-${BROWSER}      phantomjs
-
 *** Test Cases ***
-HOME                	nav.home        	${BASE_TITLE}
+HOME                	nav.home        	%{BASE_TITLE}
 CELL SERVICES       	nav.cells       	Services
 POOL USAGE          	nav.pools       	Pool Usage
 POOL QUEUES         	nav.poolqueues  	Pool Request Queues
@@ -37,8 +33,8 @@ WEBPAGE SHOULD BE REACHABLE
 
 CLICKING ELEMENT SHOULD GIVE PAGE TITLE
     [Arguments]         ${ELEMENT ID}   ${EXPECTED TITLE}
-    OPEN BROWSER        ${BASE_URL}     ${BROWSER}
-    TITLE SHOULD BE     ${BASE_TITLE}
+    OPEN BROWSER        %{BASE_URL}     %{BROWSER}
+    TITLE SHOULD BE     %{BASE_TITLE}
     CLICK ELEMENT       ${ELEMENT ID}
     TITLE SHOULD BE     ${EXPECTED TITLE}
     CLOSE BROWSER
