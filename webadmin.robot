@@ -2,26 +2,17 @@
 
 *** Settings ***
 Library  Selenium2Library
+Library  Collections
+Variables	Variables.py
 Suite Setup     WEBPAGE SHOULD BE REACHABLE     %{BASE_URL}     %{BASE_TITLE}     %{BROWSER}
-Test Template   CLICKING ELEMENT SHOULD GIVE PAGE TITLE
+
 
 
 *** Test Cases ***
-HOME                	nav.home        	%{BASE_TITLE}
-CELL SERVICES       	nav.cells       	Services
-POOL USAGE          	nav.pools       	Pool Usage
-POOL QUEUES         	nav.poolqueues  	Pool Request Queues
-POOL QUEUE PLOTS    	nav.poolqueueplots  	Pool Queue Activity Plots
-POOLGROUPS          	nav.poolgroup  		Pool Property Tables
-TAPE TRANSFER QUEUE     nav.tapetransfers   	dCache Dataset Restore Monitor
-ACTIVE TRANSFERS    	nav.activetransfers     Active Transfers
-BILLING PLOTS       	nav.billing    		Billing History Plots
-POOL SELECTION SETUP    nav.poolselection   	PoolManager (Pool SelectionUnit) Configuration
-SPACE TOKENS		nav.space		Space Tokens
-POOL ADMIN		nav.pooladmin		Login
-CELL ADMIN		nav.celladmin		Login
-ALARMS			nav.alarms		Login
-
+NAVIGATION
+	:FOR	${ELEM_ID}	IN	@{ElemID_Title_dict}
+	\	${EXPECTED_TITLE}=	GET FROM DICTIONARY	${ElemID_Title_dict}	${ELEM_ID}
+	\	CLICKING ELEMENT SHOULD GIVE PAGE TITLE		${ELEM_ID}	${EXPECTED_TITLE}
 
 
 *** Keywords ***
