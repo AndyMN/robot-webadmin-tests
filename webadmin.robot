@@ -22,7 +22,9 @@ ACTIVE TRANSFERS    	nav.activetransfers     Active Transfers
 BILLING PLOTS       	nav.billing    		Billing History Plots
 POOL SELECTION SETUP    nav.poolselection   	PoolManager (Pool SelectionUnit) Configuration
 SPACE TOKENS		nav.space		Space Tokens
-
+POOL ADMIN		nav.pooladmin		Login
+CELL ADMIN		nav.celladmin		Login
+ALARMS			nav.alarms		Login
 
 
 
