@@ -12,7 +12,7 @@ FIRST TEST
 
 *** Keywords ***
 WEBPAGE SHOULD BE REACHABLE
-    [Arguments]      ${URL}     ${EXPECTED TITLE}
-    OPEN BROWSER    ${URL}      phantomjs
+    [Arguments]      ${URL}     ${EXPECTED TITLE}	${BROWSER}=phantomjs
+    OPEN BROWSER    ${URL}      ${BROWSER}
     TITLE SHOULD BE  ${EXPECTED TITLE}
     CLOSE BROWSER
