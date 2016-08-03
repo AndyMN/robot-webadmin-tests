@@ -11,17 +11,17 @@ ${BASE_TITLE}   dCache Overview
 ${BROWSER}      phantomjs
 
 *** Test Cases ***
-HOME                nav.home        ${BASE_TITLE}
-CELL SERVICES       nav.cells       Services
-POOL USAGE          nav.pools       Pool Usage
-POOL QUEUES         nav.poolqueues  Pool Request Queues
-POOL QUEUE PLOTS    nav.poolqueueplots  Pool Queue Activity Plots
-POOLGROUPS          nav.poolgroups  Pool Property Tables
-TAPE TRANSFER QUEUE     nav.tapetransfers   dCache Dataset Restore Monitor
-ACTIVE TRANSFERS    nav.activetransfers     Active Transfers
-BILLING PLOTS       nav.billing     Billing History Plots
-POOL SELECTION SETUP    nav.poolselection   PoolManager (Pool SelectionUnit) Configuration
-
+HOME                	nav.home        	${BASE_TITLE}
+CELL SERVICES       	nav.cells       	Services
+POOL USAGE          	nav.pools       	Pool Usage
+POOL QUEUES         	nav.poolqueues  	Pool Request Queues
+POOL QUEUE PLOTS    	nav.poolqueueplots  	Pool Queue Activity Plots
+POOLGROUPS          	nav.poolgroup  		Pool Property Tables
+TAPE TRANSFER QUEUE     nav.tapetransfers   	dCache Dataset Restore Monitor
+ACTIVE TRANSFERS    	nav.activetransfers     Active Transfers
+BILLING PLOTS       	nav.billing    		Billing History Plots
+POOL SELECTION SETUP    nav.poolselection   	PoolManager (Pool SelectionUnit) Configuration
+SPACE TOKENS		nav.space		Space Tokens
 
 
 
