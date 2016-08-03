@@ -6,3 +6,4 @@
 *.png
 *.sh
 *.pyc
+auth_vars.py
