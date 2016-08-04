@@ -13,7 +13,8 @@ ${USERNAME_ON_SITE}	xpath=//span[@id='userpannel.username']
 
 *** Test Cases ***
 LOGIN VIA SYMBOL
-    	OPEN BROWSER	%{BASE_URL}	%{BROWSER}
+    	[Documentation]		Login using the symbol on the home page.
+	OPEN BROWSER	%{BASE_URL}	%{BROWSER}
 	CLICK ELEMENT	home.login
 	TITLE SHOULD BE		Login
 	SUBMIT CREDENTIALS  ${ADMIN_USERNAME}   ${ADMIN_PASSWORD}
@@ -22,6 +23,7 @@ LOGIN VIA SYMBOL
 	CLOSE BROWSER
 
 LOGIN VIA USER ACTION
+	[Documentation]		Login using the login button in the user panel.
 	OPEN BROWSER	%{BASE_URL}	%{BROWSER}
 	CLICK ELEMENT	userpannel.action
 	TITLE SHOULD BE		Login
@@ -31,6 +33,7 @@ LOGIN VIA USER ACTION
 	CLOSE BROWSER
 
 RESET BUTTON
+	[Documentation]		Checks if the reset button on the login screen empties the text fields of the login form.
 	OPEN BROWSER	%{BASE_URL}	%{BROWSER}
 	CLICK ELEMENT	userpannel.action
 	TITLE SHOULD BE		Login
@@ -41,6 +44,7 @@ RESET BUTTON
 	CLOSE BROWSER
 	
 LOGIN THEN LOGOUT VIA USER ACTION
+	[Documentation]		Login then logout using the button on the user panel
 	OPEN BROWSER	%{BASE_URL}	%{BROWSER}
 	CLICK ELEMENT	userpannel.action
 	TITLE SHOULD BE		Login
@@ -52,6 +56,7 @@ LOGIN THEN LOGOUT VIA USER ACTION
 	CLOSE BROWSER
 
 LOGIN THEN LOGOUT VIA SYMBOL
+	[Documentation]		Login then logout using the symbol on the home page
 	OPEN BROWSER	%{BASE_URL}	%{BROWSER}
 	CLICK ELEMENT	home.login
 	TITLE SHOULD BE		Login
