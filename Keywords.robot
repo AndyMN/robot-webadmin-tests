@@ -1,3 +1,4 @@
+
 *** Keywords ***
 WEBPAGE SHOULD BE REACHABLE
     [Arguments]         ${URL}      ${EXPECTED TITLE}	${BROWSER}
