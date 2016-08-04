@@ -1,14 +1,11 @@
 *** Settings ***
 Resource	Keywords.robot
 Variables	auth_vars.py
+Resource	Variables.robot
 Library		Collections
 Library  	Selenium2Library
 Suite Setup     WEBPAGE SHOULD BE REACHABLE     %{BASE_URL}     %{BASE_TITLE}   %{BROWSER}
 Suite Teardown  CLOSE ALL BROWSERS
-
-
-*** Variables ***
-${USERNAME_ON_SITE}	xpath=//span[@id='userpannel.username']
 
 
 *** Test Cases ***
