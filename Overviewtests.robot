@@ -2,7 +2,6 @@
 Library		Selenium2Library
 Library		Collections
 Resource	Keywords.robot
-Resource	Variables.robot
 Variables	auth_vars.py
 Variables	Variables.py
 Suite Setup	ABLE TO LOGIN TO PAGE	${PAGE_NAME}	${ADMIN_USERNAME}	${ADMIN_PASSWORD}

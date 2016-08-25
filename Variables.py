@@ -9,3 +9,6 @@ ElemID_Title_admin["nav.alarms"] = "DCache Alarm Page"
 
 # PageName is name that is written on the buttons to go to each page
 PageName_ElemID_dict = {"Home":"nav.home", "Cell Services":"nav.cells", "Pool Usage":"nav.pools", "Pool Queues":"nav.poolqueues", "Pool Queue Plots":"nav.poolqueueplots", "Poolgroups":"nav.poolgroup", "Tape Transfer Queue":"nav.tapetransfers", "Active Transfers":"nav.activetransfers", "Billing Plots":"nav.billing", "Pool Selection Setup":"nav.poolselection", "Pool Admin":"nav.pooladmin", "Cell Admin":"nav.celladmin", "Space Tokens":"nav.space", "Alarms":"nav.alarms"}
+
+
+USERNAME_ON_SITE = "xpath=//span[@id='userpannel.username']"

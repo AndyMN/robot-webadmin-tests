@@ -1,6 +1,5 @@
 *** Settings ***
 Resource	Keywords.robot
-Resource	Variables.robot
 Variables	auth_vars.py
 Variables	Variables.py
 Library		Collections

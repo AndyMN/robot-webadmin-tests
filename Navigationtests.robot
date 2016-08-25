@@ -2,7 +2,6 @@
 Library		Selenium2Library
 Library		Collections
 Resource	Keywords.robot
-Resource	Variables.robot
 Variables	auth_vars.py
 Variables	Variables.py
 Suite Setup	WEBPAGE SHOULD BE REACHABLE	%{BASE_URL}	%{BASE_TITLE}	%{BROWSER}
