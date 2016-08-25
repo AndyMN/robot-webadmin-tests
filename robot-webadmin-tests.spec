@@ -19,8 +19,7 @@ against it, along with a set of tests to verify the storage system works as expe
 
 
 %prep
-rm -rf $RPM_BUILD_ROOT/robot-webadmin*
-rm -rf $RPM_BUILD_DIR/robot-webadmin*
-rm -rf /scratch/jenkins/robotframework-webadmin*
+rm -rf $RPM_BUILD_ROOT/robot-webadmin-tests/
+rm -rf $RPM_BUILD_DIR/robot-webadmin-tests/
 wget -O $RPM_SOURCE_DIR/master.zip https://github.com/AndyMN/robot-webadmin-tests/archive/master/master.zip
-unzip -o $RPM_SOURCE_DIR/master.zip -d /scratch/jenkins/
+unzip -o $RPM_SOURCE_DIR/master.zip -d ${RPM_BUILD_DIR}
